@@ -184,6 +184,11 @@ class SphinxSearch {
     return $this->_connection->getLastWarning();
   }
 
+  public function buildExcerpts(array $docs, $index, $words, array $opts = array())
+  {
+    return $this->_connection->buildExcerpts($docs, $index, $words, $opts);
+  }
+
   private function getResultKeyByID($id, $result)
   {
     if(count($result) > 0)
