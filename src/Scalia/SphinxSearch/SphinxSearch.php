@@ -179,6 +179,11 @@ class SphinxSearch {
     return $this->_connection->getLastError();
   }
 
+  public function getWarningMessage()
+  {
+    return $this->_connection->getLastWarning();
+  }
+
   private function getResultKeyByID($id, $result)
   {
     if(count($result) > 0)
